@@ -14,7 +14,7 @@
             <h2></h2>
             <p class="data_github"></p>
             <p class="data_website"></p>
-            <p class="data_mail"></p>
+            <a class="data_mail" href=""></a>
             <p class="data_adresse"></p>
             <p class="data_alder"></p>
             <p class="data_civilstatus"></p>
@@ -22,8 +22,15 @@
             <p class="data_facebook"></p>
             <p class="data_hobby"></p>
             <p class="data_sex"></p>
+            <img src="" alt="">
         </article>
     </template>
+
+    <style>
+        img{
+            width: 300px;
+        }
+    </style>
 
     <script>
         document.addEventListener("DOMContentLoaded", hentJson);
@@ -60,6 +67,7 @@
                 klon.querySelector(".data_facebook").textContent = person.facebook;
                 klon.querySelector(".data_hobby").textContent = person.hobby;
                 klon.querySelector(".data_sex").textContent = person.sex;
+                klon.querySelector("img").src = person.billede;
                     //placer klon i html
                 modtager.appendChild(klon);
             });
